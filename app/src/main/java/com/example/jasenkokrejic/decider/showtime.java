@@ -24,7 +24,23 @@ public class showtime extends AppCompatActivity {
         Integer randy=new Random().nextInt(todo.length);
         String todox = todo[randy];
         List<String> result = Arrays.asList(todox.split("\\s*,\\s*"));
-        Log.i("myTag",result.toString());
+        Log.i("myTag result is: ",result.toString());
+        String todo_now=result.get(0);
+        Log.i("myTag","todo is "+todo_now);
+        Log.i("myTag size of result ",String.valueOf(result.size()));
+
+        List<String> result2 = result.subList(1, result.size());
+        Log.i("myTag result2 is: ",result2.toString());
+        Log.i("myTag size of result2 ",String.valueOf(result2.size()));
+
+        Log.i("myTag size of list ",String.valueOf(result.size()));
+        Log.i("myTag removed 0",result.toString());
+        String todo_now2=result.get(1);
+        Log.i("myTag","todo is "+todo_now2);
+
+        Integer randy2=new Random().nextInt(result2.size());
+        String duration=result2.get(randy2);
+        Log.i("myTag duration is",duration);
 
         Log.i("myTag",todox);
     }
