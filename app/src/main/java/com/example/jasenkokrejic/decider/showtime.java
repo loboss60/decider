@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Arrays;
 import java.util.List;
@@ -46,6 +49,14 @@ public class showtime extends AppCompatActivity {
         Log.i("myTag duration is",duration);
 
         Log.i("myTag",todox);
+
+
+        TextView text2=(TextView)findViewById(R.id.textView2);
+        text2.setText(todo_now);
+        TextView text=(TextView)findViewById(R.id.textView);
+        text.setText(duration);
+
+
 
         Button button2=(Button)findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {

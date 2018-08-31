@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,showtime.class);
-//                Log.i("myTag", "hhhhh");
-//                Log.i("myTag","hhhhhhhhh");
+
                 startActivity(intent);
 
 
