@@ -1,8 +1,11 @@
 package com.example.jasenkokrejic.decider;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,5 +46,17 @@ public class showtime extends AppCompatActivity {
         Log.i("myTag duration is",duration);
 
         Log.i("myTag",todox);
+
+        Button button2=(Button)findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(showtime.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 }
