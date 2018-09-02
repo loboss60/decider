@@ -50,8 +50,8 @@ public class showtime extends AppCompatActivity {
 
         try {
 
-      //      BufferedReader reader = new BufferedReader(new FileReader(txtFile));
-            BufferedReader reader = new BufferedReader(new FileReader("/storage/6B86-8815/decider.txt"));
+           BufferedReader reader = new BufferedReader(new FileReader(txtFile));
+       //     BufferedReader reader = new BufferedReader(new FileReader("/storage/6B86-8815/decider.txt"));
             String line;
             Log.i("ttt "," reader read");
 
