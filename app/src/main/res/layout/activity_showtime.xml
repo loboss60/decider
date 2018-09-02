@@ -3,14 +3,14 @@
 android:layout_width="match_parent" android:layout_height="match_parent">
 
 
-<Button
-    android:id="@+id/button2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="186dp"
-    android:text="Go Back" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="186dp"
+        android:text="Go Back 2" />
 
     <TextView
         android:id="@+id/textView"
@@ -18,16 +18,17 @@ android:layout_width="match_parent" android:layout_height="match_parent">
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="81dp"
+        android:gravity="center"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="28dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
         android:text="TextView" />
 
 
