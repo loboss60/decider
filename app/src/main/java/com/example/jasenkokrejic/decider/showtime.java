@@ -1,6 +1,7 @@
 package com.example.jasenkokrejic.decider;
 
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,10 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -20,6 +25,51 @@ public class showtime extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_showtime);
+
+
+
+
+
+
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            Log.i("ttt"," mounted true");
+        }
+        else{Log.i("ttt"," mounted false");}
+
+
+        Log.i("ttt",Environment.getExternalStorageDirectory().getAbsolutePath());
+        Log.i("ttt",Environment.getExternalStorageDirectory().getPath());
+
+        File sdCardDir = Environment.getExternalStorageDirectory();
+        File txtFile = new File(sdCardDir, "decider.txt");
+        Log.i("ttt ",txtFile.getAbsolutePath());
+
+        StringBuilder textstring = new StringBuilder();
+       // Log.i("ttt ",textstring.toString());
+
+        try {
+
+      //      BufferedReader reader = new BufferedReader(new FileReader(txtFile));
+            BufferedReader reader = new BufferedReader(new FileReader("/storage/6B86-8815/decider.txt"));
+            String line;
+            Log.i("ttt "," reader read");
+
+            while ((line = reader.readLine()) != null) {
+                textstring.append(line + '\n');
+                Log.i("ttt",line);
+            }
+            reader.close();
+        } catch (IOException e) {
+            Log.e("ttt", "Error occured while reading text file!!");
+        }
+
+        Log.i("text is",textstring.toString());
+
+
+
+
+
         Integer  broj=5;
         String[] todo = new String[broj];
         todo[0] = "Prošetati,5,10";
